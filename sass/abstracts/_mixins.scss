@@ -1,0 +1,25 @@
+@mixin fontStyle($size, $weight, $height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin responsive($size) {
+  @if $size == laptopSecond {
+    @media screen and (max-width: 1209px) {
+      @content;
+    }
+  } @else if $size == laptop {
+    @media screen and (max-width: 1100px) {
+      @content;
+    }
+  } @else if $size == laptopFirst {
+    @media screen and (max-width: 1050px) {
+      @content;
+    }
+  } @else if $size == mobileFirst {
+    @media screen and (max-width: 570px) {
+      @content;
+    }
+  }
+}

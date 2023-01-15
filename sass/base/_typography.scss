@@ -1,0 +1,24 @@
+body {
+  @include fontStyle(1.7rem, 500, 1.29);
+  font-family: "League Spartan", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  @include fontStyle(5.6rem, 700, 0.86);
+  letter-spacing: -2px;
+}
+
+h4 {
+  @include fontStyle(1.7rem, 700, 0.941);
+}
+
+@include responsive(mobileFirst) {
+  h1 {
+    @include fontStyle(4rem, 700, 0.8);
+    letter-spacing: -1.43px;
+  }
+
+  h4 {
+    @include fontStyle(1.7rem, 700, 0.941);
+  }
+}

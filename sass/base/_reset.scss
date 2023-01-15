@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+  background-image: url(../../images/body-bg1.svg),
+    url(../../images/body-bg2.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
+.container {
+  width: 100%;
+  max-width: 1210px;
+  padding: 0 5rem;
+  margin: 0 auto;
+}

@@ -1,0 +1,157 @@
+.hero {
+  color: $primary-violet-color;
+  padding-top: 11.8rem;
+  margin-bottom: 4rem;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12.5rem;
+  }
+
+  &__info {
+    width: 44.5rem;
+    // margin-right: auto;
+
+    h1 {
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      @include fontStyle(1.9rem, 500, 1.32);
+      letter-spacing: -0.633;
+      color: $secondary-violet-color;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__item {
+    width: 44.5rem;
+    display: flex;
+    padding: 2rem 7.9rem 2rem 3.2rem;
+    gap: 3.2rem;
+    background-color: $secondary-grey-color;
+    border-radius: 8px;
+
+    &:nth-child(2) {
+      padding-right: 4.7rem;
+      margin-left: 4.8rem;
+    }
+
+    &:nth-child(3) {
+      padding-right: 7.6rem;
+      margin-left: 9.5rem;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  @include responsive(laptop) {
+    gap: 7rem;
+  }
+
+  @include responsive(laptopFirst) {
+    padding-top: 8.2rem;
+    .container {
+      flex-direction: column;
+      gap: 3.9rem;
+    }
+
+    &__info {
+      text-align: center;
+      margin: 0;
+    }
+
+    &__item {
+      margin: 0 !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.6rem 6.6rem 1.5rem 7.6rem;
+
+      &:nth-child(2) {
+        padding: 1.6rem 5.5rem 1.5rem;
+      }
+
+      &:nth-child(3) {
+        padding: 1.6rem 6.85rem;
+      }
+    }
+  }
+
+  @include responsive(mobileFirst) {
+    &__info {
+      max-width: 32.7rem;
+    }
+    &__item {
+      width: 32.7rem;
+    }
+  }
+}
+
+.features {
+  margin-bottom: 10rem;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  &__item {
+    align-self: start;
+    width: 35rem;
+    // height: 23.4rem;
+    padding: 4rem 3.1rem 3.5rem;
+    background-color: $primary-violet-color;
+    color: white;
+    border-radius: 8px;
+
+    &:nth-child(2) {
+      margin-top: 1.6rem;
+    }
+
+    &:nth-child(3) {
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+    margin-bottom: 3.1rem;
+
+    h4:nth-child(1) {
+      margin-bottom: 0.4rem;
+    }
+    h4:nth-child(2) {
+      font-weight: 400;
+      color: $secondary-pink-color;
+    }
+  }
+
+  p {
+    letter-spacing: -0.3px;
+  }
+
+  @include responsive(laptopSecond) {
+    &__item {
+      margin: 0 !important;
+    }
+
+    &__list {
+      gap: 1.6rem 3rem;
+    }
+  }
+}
